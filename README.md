@@ -1,4 +1,4 @@
-# [Wordpress Stack]
+# Wordpress Stack
 [![Packagist](https://img.shields.io/packagist/v/circul8/wordpress.svg?style=flat-square)](https://packagist.org/packages/circul8/wordpress)
 
 Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock) flavoured with [custom theme](https://github.com/circul8/wordpress-starter-theme) based on [Timber](http://timber.github.io/timber/).
