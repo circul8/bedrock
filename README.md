@@ -1,7 +1,7 @@
 # [Wordpress Stack]
 [![Packagist](https://img.shields.io/packagist/v/circul8/wordpress.svg?style=flat-square)](https://packagist.org/packages/circul8/wordpress)
 
-Circul8's WP stack based on the [Root's Bedrock](https://github.com/roots/bedrock) flavoured with [custom theme](https://github.com/circul8/wordpress-starter-theme) based on [Timber](http://timber.github.io/timber/).
+Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock) flavoured with [custom theme](https://github.com/circul8/wordpress-starter-theme) based on [Timber](http://timber.github.io/timber/).
 
 ## Installation
 
@@ -35,8 +35,24 @@ Circul8's WP stack based on the [Root's Bedrock](https://github.com/roots/bedroc
 
 1. Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme) documentation to see all installed plugins, filters, ...
 
+## Plugins
+
+### Installing new plugins
+
+Installing new plugins are usually disabled on production due to security reasons, therefore use composer:
+
+1. Find the plugin at [WPackagist](https://wpackagist.org/)
+1. Install the plugin `composer require wpackagist-plugin/akismet`
+
+### Must-Use Plugins
+
+Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme#plugins) documentation.
+
 ## Documentation
 
 * [Starter Theme](https://github.com/circul8/wordpress-starter-theme)
 * [Bedrock](https://roots.io/bedrock/docs/)
 * [Timber](http://timber.github.io/timber/)
+* [Twig](https://twig.sensiolabs.org)
+* [Composer](https://getcomposer.org/)
+* [WPackagist](https://wpackagist.org/)
