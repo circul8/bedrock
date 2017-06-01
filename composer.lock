@@ -4,8 +4,40 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0036c7fd5cc3201da49a30f16fa5443e",
+    "hash": "ff7d78c5b0e2670e3551a32ecb0a1cd0",
+    "content-hash": "b812d66f722c30575b2a2840d049ff0f",
     "packages": [
+        {
+            "name": "circul8/wordpress-starter-theme",
+            "version": "dev-master",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/circul8/wordpress-starter-theme/zipball/05c95408ea6488c0f047b0b1d322b419d6bd43b3",
+                "reference": "05c95408ea6488c0f047b0b1d322b419d6bd43b3",
+                "shasum": ""
+            },
+            "require": {
+                "wpackagist-plugin/timber-library": "~1.2.0"
+            },
+            "type": "wordpress-theme",
+            "extra": {
+                "installer-paths": {
+                    "../../plugins/{$name}/": [
+                        "wpackagist-plugin/*",
+                        "type:wordpress-plugin"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "jarednova",
+                    "email": "jared@upstatement.com"
+                }
+            ],
+            "description": "Starter theme to build a Timber theme",
+            "time": "2017-06-01 01:15:42"
+        },
         {
             "name": "composer/installers",
             "version": "v1.2.0",
@@ -385,21 +417,41 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "wpackagist-plugin/timber-library",
+            "version": "1.2.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/timber-library/",
+                "reference": "tags/1.2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/timber-library.1.2.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/timber-library/"
         }
     ],
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "f7dfecbee89d68ab475a6c9e17d22bc9b69aed97"
+                "reference": "dcbed1074f8244661eecddfc2a675430d8d33f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f7dfecbee89d68ab475a6c9e17d22bc9b69aed97",
-                "reference": "f7dfecbee89d68ab475a6c9e17d22bc9b69aed97",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dcbed1074f8244661eecddfc2a675430d8d33f62",
+                "reference": "dcbed1074f8244661eecddfc2a675430d8d33f62",
                 "shasum": ""
             },
             "require": {
@@ -464,12 +516,14 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-05-03 23:30:39"
+            "time": "2017-05-22 02:43:20"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "circul8/wordpress-starter-theme": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
