@@ -7,7 +7,7 @@ Circul8's WP stack based on the [Root's Bedrock](https://github.com/roots/bedroc
 
 1. Create a new project in a new folder for your project:
 
-  `composer create-project circul8/wordpress your-project-folder-name`
+  `composer create-project circul8/wordpress:dev-master your-project-folder-name`
 
 1. Update environment variables in `.env`  file:
   * `DB_NAME` - Database name
@@ -23,8 +23,20 @@ Circul8's WP stack based on the [Root's Bedrock](https://github.com/roots/bedroc
 
 1. Access WP admin at `http://example.com/wp/wp-admin`
 
+1. Activate the Starter Theme
+
+1. Set front page as a static page
+
+	![Screenshot](http://144.wtf/1Z2Jm+)
+
+1. Change desired page to Homepage template
+
+	![Screenshot](http://144.wtf/0EcIVx+)
+
+1. Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme) documentation to see all installed plugins, filters, ...
+
 ## Documentation
 
+* [Starter Theme](https://github.com/circul8/wordpress-starter-theme)
 * [Bedrock](https://roots.io/bedrock/docs/)
 * [Timber](http://timber.github.io/timber/)
-* [Starter Theme](https://github.com/circul8/wordpress-starter-theme)
