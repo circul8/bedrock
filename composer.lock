@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b812d66f722c30575b2a2840d049ff0f",
+    "content-hash": "2ce95b8099b6bf1668b5dc7674242672",
     "packages": [
         {
             "name": "circul8/wordpress-starter-theme",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/circul8/wordpress-starter-theme.git",
-                "reference": "ec522ba0827e7068afd3f18ec71d65c0167d5e70"
+                "reference": "f81c791e02a779de8fa4662a3c523e9e18079e7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/circul8/wordpress-starter-theme/zipball/ec522ba0827e7068afd3f18ec71d65c0167d5e70",
-                "reference": "ec522ba0827e7068afd3f18ec71d65c0167d5e70",
+                "url": "https://api.github.com/repos/circul8/wordpress-starter-theme/zipball/f81c791e02a779de8fa4662a3c523e9e18079e7d",
+                "reference": "f81c791e02a779de8fa4662a3c523e9e18079e7d",
                 "shasum": ""
             },
             "require": {
@@ -29,6 +29,9 @@
             },
             "type": "wordpress-theme",
             "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                },
                 "installer-paths": {
                     "../../mu-plugins/{$name}/": [
                         "wpackagist-plugin/timber-library",
@@ -48,10 +51,15 @@
                 {
                     "name": "jarednova",
                     "email": "jared@upstatement.com"
+                },
+                {
+                    "name": "Jan Blasko",
+                    "email": "janblasko@circul8.com.au",
+                    "homepage": "http://144.wtf"
                 }
             ],
             "description": "Starter theme to build a Timber theme",
-            "time": "2017-06-01 04:46:52"
+            "time": "2017-06-01 06:50:17"
         },
         {
             "name": "composer/installers",
