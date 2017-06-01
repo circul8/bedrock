@@ -12,20 +12,31 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/circul8/wordpress-starter-theme.git",
-                "reference": "05c95408ea6488c0f047b0b1d322b419d6bd43b3"
+                "reference": "ec522ba0827e7068afd3f18ec71d65c0167d5e70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/circul8/wordpress-starter-theme/zipball/05c95408ea6488c0f047b0b1d322b419d6bd43b3",
-                "reference": "05c95408ea6488c0f047b0b1d322b419d6bd43b3",
+                "url": "https://api.github.com/repos/circul8/wordpress-starter-theme/zipball/ec522ba0827e7068afd3f18ec71d65c0167d5e70",
+                "reference": "ec522ba0827e7068afd3f18ec71d65c0167d5e70",
                 "shasum": ""
             },
             "require": {
-                "wpackagist-plugin/timber-library": "~1.2.0"
+                "wpackagist-plugin/custom-field-suite": "^2.5",
+                "wpackagist-plugin/disable-comments": "^2.6",
+                "wpackagist-plugin/timber-library": "~1.2.0",
+                "wpackagist-plugin/tinymce-advanced": "^4.5",
+                "wpackagist-plugin/wp-tracy": "^1.0"
             },
             "type": "wordpress-theme",
             "extra": {
                 "installer-paths": {
+                    "../../mu-plugins/{$name}/": [
+                        "wpackagist-plugin/timber-library",
+                        "wpackagist-plugin/wp-tracy",
+                        "wpackagist-plugin/custom-field-suite",
+                        "wpackagist-plugin/disable-comments",
+                        "wpackagist-plugin/tinymce-advanced"
+                    ],
                     "../../plugins/{$name}/": [
                         "wpackagist-plugin/*",
                         "type:wordpress-plugin"
@@ -40,7 +51,7 @@
                 }
             ],
             "description": "Starter theme to build a Timber theme",
-            "time": "2017-06-01 01:15:42"
+            "time": "2017-06-01 04:46:52"
         },
         {
             "name": "composer/installers",
@@ -423,6 +434,46 @@
             "time": "2016-09-01T10:05:43+00:00"
         },
         {
+            "name": "wpackagist-plugin/custom-field-suite",
+            "version": "2.5.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/custom-field-suite/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-field-suite.zip?timestamp=1493255890",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-field-suite/"
+        },
+        {
+            "name": "wpackagist-plugin/disable-comments",
+            "version": "2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-comments/",
+                "reference": "tags/2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-comments.2.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-comments/"
+        },
+        {
             "name": "wpackagist-plugin/timber-library",
             "version": "1.2.4",
             "source": {
@@ -433,7 +484,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/timber-library.1.2.4.zip",
-                "reference": "tags/1.2.4",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -441,6 +492,46 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/timber-library/"
+        },
+        {
+            "name": "wpackagist-plugin/tinymce-advanced",
+            "version": "4.5.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/tinymce-advanced/",
+                "reference": "tags/4.5.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/tinymce-advanced.4.5.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/tinymce-advanced/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-tracy",
+            "version": "1.0.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-tracy/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-tracy.zip?timestamp=1470918924",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-tracy/"
         }
     ],
     "packages-dev": [
