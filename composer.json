@@ -2,9 +2,14 @@
   "name": "circul8/wordpress",
   "type": "project",
   "license": "MIT",
-  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
+  "description": "Custom Circul8 Wordpress stack.",
+  "homepage": "https://circul8.com.au/",
   "authors": [
+    {
+      "name": "Jan Blasko",
+      "email": "janblasko@circul8.com.au",
+      "homepage": "http://144.wtf"
+    },
     {
       "name": "Scott Walkinshaw",
       "email": "scott.walkinshaw@gmail.com",
@@ -17,11 +22,10 @@
     }
   ],
   "keywords": [
-    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+    "bedrock", "circul8", "wordpress", "stack", "composer", "timber", "wp"
   ],
   "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
+    "issues": "https://github.com/circul8/wordpress/issues"
   },
   "config": {
     "preferred-install": "dist"
