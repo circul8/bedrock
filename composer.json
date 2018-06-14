@@ -73,7 +73,8 @@
         "wpackagist-plugin/wp-tracy",
         "wpackagist-plugin/disable-comments",
         "wpackagist-plugin/tinymce-advanced",
-        "wpackagist-plugin/types"
+        "wpackagist-plugin/types",
+        "wpackagist-plugin/post-types-order"
       ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
