@@ -3,13 +3,24 @@
 
 Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock) flavoured with [custom theme](https://github.com/circul8/wordpress-starter-theme) based on [Timber](http://timber.github.io/timber/).
 
+---
+
 ## Installation
 
-1. Create a new project in a new folder for your project:
+### 1. Init the project
+Create a new project in a new folder:
 
-  `composer create-project circul8/wordpress:dev-master your-project-folder-name`
+It's important to set the ACF PRO key at the beginning otherwise the installation will fail:
 
-1. Update environment variables in `.env`  file:
+  ```
+    $ export ACF_PRO_KEY=123abc
+    $ composer create-project circul8/wordpress:dev-master your-project-folder-name
+  ```
+
+### 2. Configure the DB
+
+Update environment variables in `.env` file:
+
   * `DB_NAME` - Database name
   * `DB_USER` - Database user
   * `DB_PASSWORD` - Database password
@@ -19,19 +30,15 @@ Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots
   * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
   * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
 
-1. Set your site vhost document root to `/path/to/site/web/` (`/path/to/site/current/web/` if using deploys)
+### 3. Others
+
+1. Set your site vhost document root to `/web` folder e.g. `/path/to/site/web/`
 
 1. Access WP admin at `http://example.com/wp/wp-admin`
 
 1. Activate the Starter Theme
-
-1. Set front page as a static page
-
-	![Screenshot](http://144.wtf/1Z2Jm+)
-
-1. Change desired page to Homepage template
-
-	![Screenshot](http://144.wtf/0EcIVx+)
+   1. Set front page as a static page ![Screenshot](http://144.wtf/1Z2Jm+)
+   1. Change desired page to Homepage template ![Screenshot](http://144.wtf/0EcIVx+)
 
 1. Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme) documentation to see all installed plugins, filters, ...
 
