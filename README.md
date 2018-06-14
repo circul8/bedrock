@@ -70,7 +70,7 @@ Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme#plu
 
 In order to develop this package locally, you need to switch to *dev* branch and run this command to test it:
 
-`composer clearcache && composer create-project --repository-url={PATH}/project/packages.json circul8/wordpress -vvv`
+`composer clearcache && composer create-project --repository-url={PATH}/project/packages.json circul8/wordpress`
 
 Don't forget to change the *{PATH}* to the project repository. Also, look at the *packages.json* an change the `source.url`.
 
