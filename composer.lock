@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf3c729a34efbe217f4bd8c3896384a9",
+    "content-hash": "71534229ae916ec195e607f6877cb6cb",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
