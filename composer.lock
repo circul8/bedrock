@@ -27,16 +27,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/circul8/wordpress-starter-theme.git",
-                "reference": "284063a2804d3b37f7a70d39f4460fd974d08242"
+                "reference": "f91deaea12ccd4b9a2660b3447448d698ba2f758"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/circul8/wordpress-starter-theme/zipball/284063a2804d3b37f7a70d39f4460fd974d08242",
-                "reference": "284063a2804d3b37f7a70d39f4460fd974d08242",
+                "url": "https://api.github.com/repos/circul8/wordpress-starter-theme/zipball/f91deaea12ccd4b9a2660b3447448d698ba2f758",
+                "reference": "f91deaea12ccd4b9a2660b3447448d698ba2f758",
                 "shasum": ""
             },
             "require": {
-                "wpackagist-plugin/custom-field-suite": "^2.5",
                 "wpackagist-plugin/disable-comments": "^1.7",
                 "wpackagist-plugin/timber-library": "^1.2",
                 "wpackagist-plugin/tinymce-advanced": "^4.5",
@@ -51,7 +50,6 @@
                     "../../mu-plugins/{$name}/": [
                         "wpackagist-plugin/timber-library",
                         "wpackagist-plugin/wp-tracy",
-                        "wpackagist-plugin/custom-field-suite",
                         "wpackagist-plugin/disable-comments",
                         "wpackagist-plugin/tinymce-advanced"
                     ],
@@ -77,7 +75,7 @@
                 }
             ],
             "description": "Starter theme to build a Timber theme",
-            "time": "2018-02-05T03:35:00+00:00"
+            "time": "2018-06-14T05:15:53+00:00"
         },
         {
             "name": "composer/installers",
@@ -531,26 +529,6 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/custom-field-suite",
-            "version": "2.5.12",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/custom-field-suite/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-field-suite.zip?timestamp=1513007170",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/custom-field-suite/"
         },
         {
             "name": "wpackagist-plugin/disable-comments",
