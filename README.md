@@ -63,3 +63,16 @@ Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme#plu
 * [Twig](https://twig.sensiolabs.org)
 * [Composer](https://getcomposer.org/)
 * [WPackagist](https://wpackagist.org/)
+
+---
+
+# Local development
+
+In order to develop this package locally, you need to switch to *dev* branch and run this command to test it:
+
+`composer clearcache && composer create-project --repository-url={PATH}/project/packages.json circul8/wordpress -vvv`
+
+Don't forget to change the *{PATH}* to the project repository. Also, look at the *packages.json* an change the `source.url`.
+
+### Reference
+ - https://gist.github.com/wimvds/7150868
