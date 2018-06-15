@@ -1,23 +1,53 @@
 <?xml version="1.0"?>
-<ruleset name="Roots">
-  <description>Roots Coding Standards</description>
+<ruleset name="Circul8">
+	<description>Circul8 Coding Standards</description>
+	<!-- Reference: https://github.com/juzna/nette-coding-standard/blob/master/NetteStandard/ruleset.xml //-->
 
-  <!-- Scan all files in directory -->
-  <file>.</file>
+	<!-- Scan all files in directory -->
+	<file>.</file>
 
-  <!-- Scan only PHP files -->
-  <arg name="extensions" value="php"/>
+	<!-- Scan only PHP files -->
+	<arg name="extensions" value="php"/>
 
-  <!-- Ignore WordPress and Composer dependencies -->
-  <exclude-pattern>web/wp</exclude-pattern>
-  <exclude-pattern>vendor/</exclude-pattern>
+	<!-- Ignore WordPress and Composer dependencies -->
+	<exclude-pattern>web/wp</exclude-pattern>
+	<exclude-pattern>vendor/</exclude-pattern>
 
-  <!-- Show colors in console -->
-  <arg value="-colors"/>
+	<!-- Show colors in console -->
+	<arg value="-colors"/>
 
-  <!-- Show sniff codes in all reports -->
-  <arg value="ns"/>
+	<!-- Show sniff codes in all reports -->
+	<arg value="ns"/>
 
-  <!-- Use PSR-2 as a base -->
-  <rule ref="PSR2"/>
+	<!-- We use 4-width tab //-->
+	<arg name="tab-width" value="2"/>
+
+	<rule ref="PSR2">
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/><!-- We use tabs -->
+		<exclude name="Generic.Files.LineLength"/><!-- Do not check line length //-->
+		<exclude name="Generic.PHP.LowerCaseConstant"/><!-- We use uppercase constants -->
+	</rule>
+	<rule ref="PSR2.Files.EndFileNewline"/>
+    <rule ref="PSR2.Files.EndFileNewline"/>
+
+	<rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/><!-- We use tabs -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/><!-- We use short array syntax -->
+	<rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+
+	<rule ref="Generic.WhiteSpace.ScopeIndent"><!-- We use tabs -->
+		<properties>
+			<property name="indent" value="4"/>
+			<property name="tabIndent" value="true"/>
+		</properties>
+	</rule>
+
+	<rule ref="Squiz.Classes.LowercaseClassKeywords"/>
+	<rule ref="Squiz.Classes.ValidClassName"/>
+	<rule ref="Squiz.WhiteSpace.FunctionSpacing" >
+		<properties>
+			<property name="spacing" value="2" /><!-- Add 2 lines at the beginning of each method -->
+			<property name="spacingAfterLast" value="0" /><!-- Expect no new line after last method -->
+		</properties>
+	</rule>
 </ruleset>
