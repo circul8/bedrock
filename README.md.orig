@@ -70,6 +70,8 @@ Wordpress administration has problems with some mu-plugins assets. If on Nginx, 
 * [Twig](https://twig.sensiolabs.org)
 * [Composer](https://getcomposer.org/)
 * [WPackagist](https://wpackagist.org/)
+<<<<<<< HEAD
+=======
 
 ## Change log
 
@@ -88,3 +90,4 @@ Don't forget to change the *{PATH}* to the project repository. Also, look at the
 
 ### Reference
  - https://gist.github.com/wimvds/7150868
+>>>>>>> release/v1.0.0
