@@ -1,7 +1,7 @@
 # Wordpress Stack
 [![Packagist](https://img.shields.io/packagist/v/circul8/wordpress.svg?style=flat-square)](https://packagist.org/packages/circul8/wordpress)
 
-Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock) flavoured with [custom theme](https://github.com/circul8/wordpress-starter-theme) based on [Timber](http://timber.github.io/timber/).
+Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock)
 
 ---
 
@@ -36,6 +36,10 @@ Update environment variables in `.env` file:
 
 1. Access WP admin at `http://example.com/wp/wp-admin`
 
+#### Starter theme
+
+It's recommended to use [Circul8 Starter Theme](https://github.com/circul8/wordpress-starter-theme#plugins).
+
 1. Activate the Starter Theme
    1. Set front page as a static page ![Screenshot](http://144.wtf/1Z2Jm+)
    1. Change desired page to Homepage template ![Screenshot](http://144.wtf/0EcIVx+)
@@ -55,20 +59,28 @@ Installing new plugins are usually disabled on production due to security reason
 
 Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme#plugins) documentation.
 
+#### Nginx
+
+Wordpress administration has problems with some mu-plugins assets. If on Nginx, redirect needs to be created - check out the `plugins/.htaccess` for more information.
+
 ## Documentation
 
-* [Starter Theme](https://github.com/circul8/wordpress-starter-theme)
 * [Bedrock](https://roots.io/bedrock/docs/)
 * [Timber](http://timber.github.io/timber/)
 * [Twig](https://twig.sensiolabs.org)
 * [Composer](https://getcomposer.org/)
 * [WPackagist](https://wpackagist.org/)
 
+## Change log
+
+### 2019-03-14
+- Versioning started. Version 1 with Wordpress 5.1.1.
+
 ---
 
 # Local development
 
-In order to develop this package locally, you need to switch to *dev* branch and run this command to test it:
+In order to develop this package locally, you need to switch to *develop* branch and run this command to test it:
 
 `composer clearcache && composer create-project --repository-url={PATH}/project/packages.json circul8/wordpress`
 
