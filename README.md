@@ -74,8 +74,10 @@ Wordpress administration has problems with some mu-plugins assets. If on Nginx, 
 ## Change log
 
 ### 2019-03-14
-- v1.0.1: Fix of ACF to work with Guttenberg. Upgraded to latest Bedrock.
-- v1.0.0: Versioning started. Wordpress upgraded to 5.1.1.
+- v1.0.0:
+  - Versioning started. Wordpress upgraded to 5.1.1.
+  - Fix of ACF to work with Guttenberg.
+  - Upgraded to latest Bedrock.
 
 ---
 
