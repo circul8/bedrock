@@ -1,7 +1,7 @@
 # Wordpress Stack
 [![Packagist](https://img.shields.io/packagist/v/circul8/wordpress.svg?style=flat-square)](https://packagist.org/packages/circul8/wordpress)
 
-Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock)
+Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock) with some pre-installed plugins.
 
 ---
 
@@ -74,7 +74,8 @@ Wordpress administration has problems with some mu-plugins assets. If on Nginx, 
 ## Change log
 
 ### 2019-03-14
-- Versioning started. Version 1 with Wordpress 5.1.1.
+- v1.0.1: Fix of ACF to work with Guttenberg. Upgraded to latest Bedrock.
+- v1.0.0: Versioning started. Wordpress upgraded to 5.1.1.
 
 ---
 
