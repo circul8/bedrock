@@ -1,9 +1,7 @@
 # Wordpress Stack
 [![Packagist](https://img.shields.io/packagist/v/circul8/wordpress.svg?style=flat-square)](https://packagist.org/packages/circul8/wordpress)
 
-Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock) with some pre-installed plugins.
-
----
+> Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock) with some pre-installed plugins.
 
 ## Installation
 
@@ -46,11 +44,58 @@ Installing new plugins are usually disabled on production due to security reason
 1. Find the plugin at [WPackagist](https://wpackagist.org/)
 1. Install the plugin `composer require wpackagist-plugin/akismet`
 
+## Testing & Coding style
+
+The PHPCS has been removed due to the fact this is just a scaffold for WP Headless projects that should use WP plugins only without any theme.
+
+If additional functionality is needed, follow the [Circul8 Coding Standards here](https://github.com/circul8/coding-standards).
+
+## Local development
+
+In order to develop this project package locally, you need to:
+1. Clone this repo
+1. Do your changes in the clone
+1. Commit changes (do not push)
+1. Create `packages.json` somewhere (see bellow)
+1. Run the `create-project` with specified `packages.json` (see bellow)
+
+### `create-project`
+
+```bash
+$ composer clearcache && export ACF_PRO_KEY="123==" && composer create-project --repository-url={YOURPATH}/packages.json circul8/wordpress
+```
+
+Don't forget to change the *{YOURPATH}* to your `packages.json`.
+
+### `packages.json`
+
+```json
+{
+  "package": {
+      "name": "circul8/wordpress",
+      "version": "1.0.0",
+      "source": {
+        "url": "{YOURPATH}wordpress/.git",
+        "type": "git",
+        "reference": "headless"
+      }
+  }
+}
+```
+
+Again, don't forget to change the *{YOURPATH}*. This time it must lead to the cloned repository of the `circul8/wordpress`.
+
+#### Reference
+ - https://gist.github.com/wimvds/7150868
+
 ## Documentation / Reference
 
 * [Bedrock](https://roots.io/bedrock/docs/)
 * [Composer](https://getcomposer.org/)
 * [WPackagist](https://wpackagist.org/)
+
+
+---
 
 ## Change log
 - v2.0.0 (2020-01-28)
@@ -63,16 +108,3 @@ Installing new plugins are usually disabled on production due to security reason
   - Versioning started. Wordpress upgraded to 5.1.1.
   - Fix of ACF to work with Guttenberg.
   - Upgraded to latest Bedrock.
-
----
-
-# Local development
-
-In order to develop this package locally, you need to switch to *develop* branch and run this command to test it:
-
-`composer clearcache && composer create-project --repository-url={PATH}/project/packages.json circul8/wordpress`
-
-Don't forget to change the *{PATH}* to the project repository. Also, look at the *packages.json* an change the `source.url`.
-
-### Reference
- - https://gist.github.com/wimvds/7150868
