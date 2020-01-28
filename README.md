@@ -1,93 +1,70 @@
-# Wordpress Stack
-[![Packagist](https://img.shields.io/packagist/v/circul8/wordpress.svg?style=flat-square)](https://packagist.org/packages/circul8/wordpress)
+# [Bedrock](https://roots.io/bedrock/)
 
-Circul8's WordPress stack based on the [Root's Bedrock](https://github.com/roots/bedrock) with some pre-installed plugins.
+[![Packagist](https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square)](https://packagist.org/packages/roots/bedrock)
+[![Build Status](https://img.shields.io/circleci/build/gh/roots/bedrock?style=flat-square)](https://circleci.com/gh/roots/bedrock)
+[![Follow Roots](https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2)](https://twitter.com/rootswp)
 
----
+Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
+
+Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
+
+## Features
+
+* Better folder structure
+* Dependency management with [Composer](https://getcomposer.org)
+* Easy WordPress configuration with environment specific files
+* Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
+* Autoloader for mu-plugins (use regular plugins as mu-plugins)
+* Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
+
+## Requirements
+
+* PHP >= 7.1
+* Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
 ## Installation
 
-### 1. Init the project
-Create a new project in a new folder:
-
-It's important to set the ACF PRO key at the beginning otherwise the installation will fail:
-
-  ```
-    $ export ACF_PRO_KEY=123abc
-    $ composer create-project circul8/wordpress:dev-master your-project-folder-name
-  ```
-
-### 2. Configure the DB
-
-Update environment variables in `.env` file:
-
-  * `DB_NAME` - Database name
-  * `DB_USER` - Database user
-  * `DB_PASSWORD` - Database password
-  * `DB_HOST` - Database host
+1. Create a new project:
+    ```sh
+    $ composer create-project roots/bedrock
+    ```
+2. Update environment variables in the `.env` file. Wrap values that may contain non-alphanumeric characters with quotes, or they may be incorrectly parsed.
+  * Database variables
+    * `DB_NAME` - Database name
+    * `DB_USER` - Database user
+    * `DB_PASSWORD` - Database password
+    * `DB_HOST` - Database host
+    * Optionally, you can define `DATABASE_URL` for using a DSN instead of using the variables above (e.g. `mysql://user:password@127.0.0.1:3306/db_name`)
   * `WP_ENV` - Set to environment (`development`, `staging`, `production`)
-  * `WP_HOME` - Full URL to WordPress home (http://example.com)
-  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
+  * `WP_HOME` - Full URL to WordPress home (https://example.com)
+  * `WP_SITEURL` - Full URL to WordPress including subdirectory (https://example.com/wp)
   * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
-
-### 3. Others
-
-1. Set your site vhost document root to `/web` folder e.g. `/path/to/site/web/`
-
-1. Access WP admin at `http://example.com/wp/wp-admin`
-
-#### Starter theme
-
-It's recommended to use [Circul8 Starter Theme](https://github.com/circul8/wordpress-starter-theme#plugins).
-
-1. Activate the Starter Theme
-   1. Set front page as a static page ![Screenshot](http://144.wtf/1Z2Jm+)
-   1. Change desired page to Homepage template ![Screenshot](http://144.wtf/0EcIVx+)
-
-1. Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme) documentation to see all installed plugins, filters, ...
-
-## Plugins
-
-### Installing new plugins
-
-Installing new plugins are usually disabled on production due to security reasons, therefore use composer:
-
-1. Find the plugin at [WPackagist](https://wpackagist.org/)
-1. Install the plugin `composer require wpackagist-plugin/akismet`
-
-### Must-Use Plugins
-
-Check the [Starter Theme](https://github.com/circul8/wordpress-starter-theme#plugins) documentation.
-
-#### Nginx
-
-Wordpress administration has problems with some mu-plugins assets. If on Nginx, redirect needs to be created - check out the `plugins/.htaccess` for more information.
+    * Generate with [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command)
+    * Generate with [our WordPress salts generator](https://roots.io/salts.html)
+3. Add theme(s) in `web/app/themes/` as you would for a normal WordPress site
+4. Set the document root on your webserver to Bedrock's `web` folder: `/path/to/site/web/`
+5. Access WordPress admin at `https://example.com/wp/wp-admin/`
 
 ## Documentation
 
-* [Bedrock](https://roots.io/bedrock/docs/)
-* [Timber](http://timber.github.io/timber/)
-* [Twig](https://twig.sensiolabs.org)
-* [Composer](https://getcomposer.org/)
-* [WPackagist](https://wpackagist.org/)
+Bedrock documentation is available at [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/).
 
-## Change log
+## Contributing
 
-### 2019-03-14
-- v1.0.0:
-  - Versioning started. Wordpress upgraded to 5.1.1.
-  - Fix of ACF to work with Guttenberg.
-  - Upgraded to latest Bedrock.
+Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
 
----
+## Bedrock sponsors
 
-# Local development
+Help support our open-source development efforts by [becoming a patron](https://www.patreon.com/rootsdev).
 
-In order to develop this package locally, you need to switch to *develop* branch and run this command to test it:
+<a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="200" height="150"></a> <a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="200" height="150"></a> <a href="https://scaledynamix.com/"><img src="https://cdn.roots.io/app/uploads/scale-dynamix.svg" alt="Scale Dynamix" width="200" height="150"></a>
 
-`composer clearcache && composer create-project --repository-url={PATH}/project/packages.json circul8/wordpress`
+## Community
 
-Don't forget to change the *{PATH}* to the project repository. Also, look at the *packages.json* an change the `source.url`.
+Keep track of development and community news.
 
-### Reference
- - https://gist.github.com/wimvds/7150868
+* Participate on the [Roots Discourse](https://discourse.roots.io/)
+* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
+* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
+* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+* Listen to the [Roots Radio podcast](https://roots.io/podcast/)
