@@ -61,7 +61,6 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.8.0-beta4",
-    "circul8/timber": "*",
     "wpackagist-plugin/wp-tracy": "^2.0",
     "wpackagist-plugin/disable-comments": "^1.9.0",
     "wpackagist-plugin/tinymce-advanced": "^5.1.0",
@@ -74,21 +73,21 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": [
-        "type:wordpress-muplugin",
-        "wpackagist-plugin/timber-library",
-        "wpackagist-plugin/wp-tracy",
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin",
         "wpackagist-plugin/disable-comments",
         "wpackagist-plugin/tinymce-advanced",
         "wpackagist-plugin/types",
         "wpackagist-plugin/post-types-order"
       ],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"
   },
   "scripts": {
+    "init": [
+      "echo 'start'"
+    ],
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env'); unlink('.env.example');\""
     ],
