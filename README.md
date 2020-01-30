@@ -62,7 +62,7 @@ In order to develop this project package locally, you need to:
 ### `create-project`
 
 ```bash
-$ composer clearcache && export ACF_PRO_KEY="123==" && composer create-project --repository-url={YOURPATH}/packages.json circul8/wordpress
+$ composer clearcache && export ACF_PRO_KEY="123==" && composer create-project --repository-url={YOURPATH}/packages.json circul8/wordpress:dev-master
 ```
 
 Don't forget to change the *{YOURPATH}* to your `packages.json`.
