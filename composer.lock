@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58a7093e7bc0d6b3c592fdc41b09b7d6",
+    "content-hash": "12fc3950f7798a0c3015a21a34943f01",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -605,6 +605,26 @@
             "time": "2019-09-10T21:37:39+00:00"
         },
         {
+            "name": "wpackagist-plugin/classic-editor",
+            "version": "1.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/classic-editor/",
+                "reference": "tags/1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/classic-editor/"
+        },
+        {
             "name": "wpackagist-plugin/disable-comments",
             "version": "1.10.2",
             "source": {
@@ -625,16 +645,16 @@
             "homepage": "https://wordpress.org/plugins/disable-comments/"
         },
         {
-            "name": "wpackagist-plugin/disable-gutenberg",
-            "version": "2.0",
+            "name": "wpackagist-plugin/duplicate-post",
+            "version": "3.2.4",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/disable-gutenberg/",
-                "reference": "tags/2.0"
+                "url": "https://plugins.svn.wordpress.org/duplicate-post/",
+                "reference": "tags/3.2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-gutenberg.2.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -642,7 +662,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/disable-gutenberg/"
+            "homepage": "https://wordpress.org/plugins/duplicate-post/"
         },
         {
             "name": "wpackagist-plugin/post-types-order",
@@ -683,6 +703,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/tinymce-advanced/"
+        },
+        {
+            "name": "wpackagist-plugin/wordfence",
+            "version": "7.4.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordfence/",
+                "reference": "tags/7.4.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordfence.7.4.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordfence/"
         }
     ],
     "packages-dev": [

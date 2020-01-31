@@ -61,7 +61,9 @@
     "wpackagist-plugin/disable-comments": "^1.9.0",
     "wpackagist-plugin/tinymce-advanced": "^5.1.0",
 	"wpackagist-plugin/post-types-order": "^1.9.3",
-	"wpackagist-plugin/disable-gutenberg":"2.0"
+	"wpackagist-plugin/classic-editor": "^1.5",
+	"wpackagist-plugin/duplicate-post":"3.2.4",
+	"wpackagist-plugin/wordfence": "7.4.5"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master"
@@ -76,8 +78,11 @@
     "installer-paths": {
 	  "web/app/mu-plugins/{$name}/": [
 		"type:wordpress-muplugin",
-		"wpackagist-plugin/disable-gutenberg",
-		"wpackagist-plugin/disable-comments"
+		"wpackagist-plugin/classic-editor",
+		"wpackagist-plugin/disable-comments",
+		"wpackagist-plugin/duplicate-post",
+		"wpackagist-plugin/post-types-order",
+		"wpackagist-plugin/tinymce-advanced"
 	],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
