@@ -58,11 +58,13 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.8.7",
-    "wpackagist-plugin/wp-tracy": "^2.0",
     "wpackagist-plugin/disable-comments": "^1.9.0",
     "wpackagist-plugin/tinymce-advanced": "^5.1.0",
-    "wpackagist-plugin/types": "^2.3.5",
-    "wpackagist-plugin/post-types-order": "^1.9.3"
+	"wpackagist-plugin/post-types-order": "^1.9.3",
+	"wpackagist-plugin/classic-editor": "^1.5",
+	"wpackagist-plugin/duplicate-post":"^3.2.4",
+	"wpackagist-plugin/wordfence": "^7.4.5",
+	"wpackagist-plugin/wp-mail-smtp": "^1.8.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master"
@@ -75,13 +77,16 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin",
-        "wpackagist-plugin/disable-comments",
-        "wpackagist-plugin/tinymce-advanced",
-        "wpackagist-plugin/types",
-        "wpackagist-plugin/post-types-order"
-      ],
+	  "web/app/mu-plugins/{$name}/": [
+		"type:wordpress-muplugin",
+		"wpackagist-plugin/classic-editor",
+		"wpackagist-plugin/disable-comments",
+		"wpackagist-plugin/duplicate-post",
+		"wpackagist-plugin/post-types-order",
+		"wpackagist-plugin/tinymce-advanced",
+		"advanced-custom-fields/advanced-custom-fields-pro"
+	],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"
