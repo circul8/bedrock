@@ -82,7 +82,8 @@
 		"wpackagist-plugin/disable-comments",
 		"wpackagist-plugin/duplicate-post",
 		"wpackagist-plugin/post-types-order",
-		"wpackagist-plugin/tinymce-advanced"
+		"wpackagist-plugin/tinymce-advanced",
+		"advanced-custom-fields/advanced-custom-fields-pro"
 	],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
