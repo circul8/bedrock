@@ -53,6 +53,8 @@ Update environment variables in `.env` file:
    - Most important plugin.
 1. [Wordfence](https://wordpress.org/plugins/wordfence) (not activated)
    - This is not mandatory plugin, but recommended. Security.
+1. [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp) (not activated)
+   - This is not mandatory plugin, but recommended, `wpmail()` is not reliable. Company policy is to use Mailgun.
 
 **MU - Must Use Plugin*
 
