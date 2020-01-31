@@ -10,7 +10,7 @@ Create a new project in a new folder:
 
 It's important to set the ACF PRO key at the beginning otherwise the installation will fail:
 
-  ```
+  ```sh
     $ export ACF_PRO_KEY=123abc
     $ composer create-project circul8/wordpress your-project-folder-name
   ```
@@ -36,6 +36,25 @@ Update environment variables in `.env` file:
 
 
 ## Plugins
+
+### Pre-installed plugins
+
+1. [Classic Editor](https://wordpress.org/plugins/classic-editor/) (activated -> MU* plugin)
+   - We don't use the Gutenberg.
+1. [Disable Comments](https://wordpress.org/plugins/disable-comments/) (activated -> MU* plugin)
+   - All comments must be disabled. We don't use this functionallity. Also, it's a security hole.
+1. [Duplicate Post](https://wordpress.org/plugins/duplicate-post) (activated -> MU* plugin)
+   - Administration UX tweak to easily copy/paste posts.
+1. [Post Types Order](https://wordpress.org/plugins/post-types-order) (activated -> MU* plugin)
+   - Administration UX tweak to easily reorder posts.
+1. [Tinymce Advanced](https://wordpress.org/plugins/tinymce-advanced) (activated -> MU* plugin)
+   - WYSIWYG enahancement.
+1. [Advanced Custom Fields PRO](https://wordpress.org/plugins/advanced-custom-fields-pro) (activated -> must use)
+   - Most important plugin.
+1. [Wordfence](https://wordpress.org/plugins/wordfence) (not activated)
+   - This is not mandatory plugin, but recommended. Security.
+
+**MU - Must Use Plugin*
 
 ### Installing new plugins
 
@@ -77,13 +96,13 @@ Don't forget to change the *{YOURPATH}* to your `packages.json`.
       "source": {
         "url": "{YOURPATH}wordpress/.git",
         "type": "git",
-        "reference": "headless"
+        "reference": "{YOURBRANCH}"
       }
   }
 }
 ```
 
-Again, don't forget to change the *{YOURPATH}*. This time it must lead to the cloned repository of the `circul8/wordpress`.
+Again, don't forget to change the *{YOURPATH}*. This time it must lead to the cloned repository of the `circul8/wordpress`. You also need to change the *{YOURBRANCH}* to your testing branch.
 
 #### Reference
  - https://gist.github.com/wimvds/7150868
